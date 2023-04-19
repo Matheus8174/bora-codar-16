@@ -1,0 +1,186 @@
+:root {
+  font-size: 62.5%;
+
+  --white-100: #E1E1E6;
+  --purple: #633BBC;
+  --purple-10: #9A00B3;
+  --purple-50: #282843;
+  --purple-100: #24243D;
+  --purple-200: #1A1924;
+  --purple-300: #16151E;
+
+  --gray-100: #8C8CBA;
+
+  --blue-100: #0088B3;
+
+  --green-100: #07847E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  outline: none;
+  background-color: var(--purple-200);
+  color: var(--white-100);
+
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+header {
+  background-color: var(--purple-300);
+
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 24px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+
+header nav ul li {
+  cursor: pointer;
+}
+
+header nav h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--white-100);
+}
+
+.seacrch {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background: var(--purple-100);
+  padding: 1.6rem 2.4rem;
+  border-radius: 5px;
+}
+
+.seacrch input {
+  background-color: transparent;
+  border: none;
+}
+
+.seacrch input::placeholder {
+  font-size: 1.2rem;
+}
+
+main {
+  overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--purple-50);
+  border-radius: 999px;
+}
+
+.user-list {
+  padding: 48px 0px 48px 48px;
+}
+
+.fist-user-name-letter {
+  width: 40px;
+  height: 40px;
+  color: var(--white-100);
+  border-radius: 8px;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter-a {
+  background-color: var(--purple);
+}
+
+.letter-b {
+  background-color: var(--green-100);
+}
+
+.letter-c {
+  background-color: var(--purple-10);
+}
+
+.letter-d {
+  background-color: var(--blue-100);
+}
+
+.user-list > li {
+  display: flex;
+  gap: 52px;
+}
+
+.user-list > li + li {
+  margin-top: 56px;
+}
+
+.user {
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.user + .user {
+  margin-top: 32px;
+}
+
+.user div p {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+
+.user div span {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: var(--gray-100);
+}
+
+.user img {
+  height: 48px;
+  width: 48px;
+}
+
+/*
+  <li class="user">
+    <img src="./assets/users-icons/Avatar-4.png" alt="user avatar">
+    <div>
+      <p>Cleiton Souza</p>
+      <span>(11) 90876-1234</span>
+    </div>
+  </li>
+*/
